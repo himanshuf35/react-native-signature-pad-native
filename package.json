@@ -41,14 +41,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/himanshu-studio/react-native-signature-pad-native.git"
+    "url": "git+https://github.com/himanshuf35/react-native-signature-pad-native"
   },
-  "author": "Himanshu Yadav <himanshu.yadav@studiographene.com> (https://github.com/himanshu-studio)",
+  "author": "Himanshu Yadav <himanshuf22@hotmail.com> (https://github.com/himanshuf35)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/himanshu-studio/react-native-signature-pad-native/issues"
+    "url": "https://github.com/himanshuf35/react-native-signature-pad-native/issues"
   },
-  "homepage": "https://github.com/himanshu-studio/react-native-signature-pad-native#readme",
+  "homepage": "https://github.com/himanshuf35/react-native-signature-pad-native#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -77,6 +77,7 @@
     "@types/react": "17.0.21"
   },
   "peerDependencies": {
+    "@shopify/react-native-skia": "^0.1.231",
     "react": "*",
     "react-native": "*"
   },
