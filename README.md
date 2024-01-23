@@ -10,7 +10,7 @@ npm install react-native-signature-pad-native
 
 ## Usage
 
-```
+```tsx
 
 import SignaturePad, {
   SignatureResult,
