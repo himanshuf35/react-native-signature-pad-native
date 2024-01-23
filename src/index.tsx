@@ -86,14 +86,7 @@ const SignaturePad = React.forwardRef<SignaturePadMethods, SignaturePadProps>(
       (touchInfo: { x: number; y: number }) => {
         const { x, y } = touchInfo;
         if (touchState.current) {
-          path.cubicTo(
-            0,
-            0,
-            startPointRef?.current?.x,
-            startPointRef?.current?.y,
-            x,
-            y
-          );
+          path.lineTo(x, y);
         }
       },
       [path]
