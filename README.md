@@ -10,12 +10,34 @@ npm install react-native-signature-pad-native
 
 ## Usage
 
-```js
-import { multiply } from 'react-native-signature-pad-native';
+```
 
-// ...
+import SignaturePad, {
+  SignatureResult,
+  SignaturePadMethods,
+} from 'react-native-signature-pad-native';
 
-const result = await multiply(3, 7);
+ const signatureRef = useRef<SignaturePadMethods>(null);
+ const [signatureImage, setSignatureImage] = React.useState<string>('');
+ const [signatureSvg, setSignatureSvg] = React.useState<string>('');
+
+ const onDrawingEnd = React.useCallback((result: SignatureResult) => {
+    setSignatureSvg(result.signaturePathSvg);
+    setSignatureImage(result.image);
+  }, []);
+
+  const onClear = React.useCallback(() => {
+    signatureRef.current?.clear();
+  }, []);
+
+
+<SignaturePad
+    ref={signatureRef}
+    onDrawingEnd={onDrawingEnd}
+    existingSignatureSvg={signatureSvg}
+    style={styles.signatureContainer}
+/>
+
 ```
 
 ## Contributing
